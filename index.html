@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jsPlumb/2.6.8/js/jsplumb.min.js"></script>
+	<script src="./show.js"></script>
+	<script>
+	$(document).ready(function(){
+	  $("button").click(function(){
+	    $("p").hide();
+	  });
+	});
+
+	$(document).ready(function(){
+		$("li").css('margin','100px')
+		// .css('background-image','url(./image/test.jpg)')
+		.css('width','50px')
+		.hover(function(){
+			$(this).css('background-color','yellow');
+		},function(){
+			$(this).css('background-color','white');
+		})
+	});
+	</script>
+
+	<title>知识架构</title>
+	<link rel="icon" type="image/x-icon" href="./image/network.ico"/>
+</head>
+
+<body>
+	<h2>这是一个标题</h2>
+	<ul>
+		
+	<li id='p1'>这是一个段落。</li>
+	<li id='p2'>这是另一个段落。</li>
+	</ul>
+	
+	<button>点我</button>
+
+  <script>
+    /* global jsPlumb */
+    jsPlumb.ready(function(){
+    	jsPlumb.connect({
+    		source: "p1",
+    		target: 'p2',
+    		endpoint: 'Dot'
+    	})
+    })
+
+    jsPlumb.importDefaults({
+    ConnectionsDetachable: false
+  })
+
+
+  </script>
+
+
+
+
+</body>
+</html>
