@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jsPlumb/2.6.8/js/jsplumb.min.js"></script>
+
+	<script src=" https://cdnjs.cloudflare.com/ajax/libs/showdown/1.1.0/showdown.min.js"></script>
+
+
+	<title>知识架构</title>
+	<link rel="icon" type="image/x-icon" href="./image/network.ico"/>
+</head>
+
+<body>
+
+	<p id='fortest'>init</p>
+	<p id='fortest2' style="display: none"> </p>
+
+  <script type="text/javascript">
+  	var converter = new showdown.Converter();
+  	// 这里尝试加载 a.txt 中的markdown文本
+
+  	$("#fortest2").load("a.txt",function(){
+  		html      = converter.makeHtml(document.getElementById('fortest2').innerHTML);
+    	console.log(html)
+    	document.getElementById('fortest').innerHTML = html;
+  	});
+
+  
+    
+
+  </script>
+
+
+
+
+</body>
+</html>
