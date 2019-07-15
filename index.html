@@ -137,6 +137,25 @@
 		  <p>1</p>
 		  <p>1</p>
 
+<p id='fortest'>init</p>
+	<p id='fortest2' style="display: none"> </p>
+
+  <script type="text/javascript">
+  	var converter = new showdown.Converter();
+  	// 这里尝试加载 a.txt 中的markdown文本
+
+  	$("#fortest2").load("a.txt",function(){
+  		html      = converter.makeHtml(document.getElementById('fortest2').innerHTML);
+    	console.log(html)
+    	document.getElementById('fortest').innerHTML = html;
+  	});
+
+  
+    
+
+  </script>
+		  
+
 		</div>
 
 
