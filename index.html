@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-	<script src="https://cdn.bootcss.com/jsPlumb/2.6.8/js/jsplumb.min.js"></script>
-
-	<script src=" https://cdnjs.cloudflare.com/ajax/libs/showdown/1.1.0/showdown.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="./utils/SimpleDropDownEffects-master/css/style4.css" />
-	<link rel="stylesheet" type="text/css" href="./show.css" />
-
-	<script src="./utils/SimpleDropDownEffects-master/js/modernizr.custom.63321.js"></script>
-
-	<!-- <script src="./show.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jsPlumb/2.6.8/js/jsplumb.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/showdown/1.1.0/showdown.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./utils/SimpleDropDownEffects-master/css/style4.css" />
+    <link rel="stylesheet" type="text/css" href="./show.css" />
+    <script src="./utils/SimpleDropDownEffects-master/js/modernizr.custom.63321.js"></script>
+    <!-- <script src="./show.js"></script>
 	<script>
 	$(document).ready(function(){
 	  $("button").click(function(){
@@ -29,139 +27,98 @@
 		})
 	});
 	</script> -->
-
-	<title>知识架构</title>
-	<link rel="icon" type="image/x-icon" href="./image/network.ico"/>
+    <title>知识架构</title>
+    <link rel="icon" type="image/x-icon" href="./image/network.ico" />
 </head>
 
 <body>
-	<div>
-		<div id='forselect' style="float: left">
-			<select id="cd-dropdown" class="cd-select">
-
-								<option value="-1" selected>计算机</option>
-
-								<option value="1" class="icon-tux">计算机原理</option>
-
-								<option value="2" class="icon-finder">操作系统</option>
-
-								<option value="3" class="icon-windows">Windows</option>
-
-								<option value="4" class="icon-android">Android</option>
-
-			</select>
-
-			<select id="cd-dropdown2" class="cd-select">
-
-								<option value="-1" selected>Pick an operating system</option>
-
-								<option value="1" class="icon-tux">Linux</option>
-
-								<option value="2" class="icon-finder">Mac</option>
-
-								<option value="3" class="icon-windows">Windows</option>
-
-								<option value="4" class="icon-android">Android</option>
-
-			</select>
-		</div>
-  
-
-		<script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
-
-		<script type="text/javascript" src="./utils/SimpleDropDownEffects-master/js/jquery.dropdown.js"></script>
-
-		<script type="text/javascript">
-
-			
-
-			$( function() {
-
-				
-
-				$( '#cd-dropdown' ).dropdown();
-				$( '#cd-dropdown2' ).dropdown();
-				$( '#forselect' ).css('position','relative')
-				.css('left','10px');
-
-
-			});
+    <div>
+        <div id='forselect' style="float: left">
+            <select id="cd-dropdown" class="cd-select">
+                <option value="-1" selected>计算机</option>
+                <option value="1" class="icon-tux">计算机原理</option>
+                <option value="2" class="icon-finder">操作系统</option>
+                <option value="3" class="icon-windows">Windows</option>
+                <option value="4" class="icon-android">Android</option>
+            </select>
+            <select id="cd-dropdown2" class="cd-select">
+                <option value="-1" selected>Pick an operating system</option>
+                <option value="1" class="icon-tux">Linux</option>
+                <option value="2" class="icon-finder">Mac</option>
+                <option value="3" class="icon-windows">Windows</option>
+                <option value="4" class="icon-android">Android</option>
+            </select>
+        </div>
+        <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="./utils/SimpleDropDownEffects-master/js/jquery.dropdown.js"></script>
+        <script type="text/javascript">
+        $(function() {
 
 
 
-		</script>
-
-		<div id='display_place' style="float: left;margin-left: -620px">
-
-				<h2>这是一个标题</h2>
-			<ul>
-				
-			<li id='p1'>这是一个段落。</li>
-			<li id='p2'>这是另一个段落。</li>
-			</ul>
-			
-			<button>点我</button>
-
-		  <script>
-		    /* global jsPlumb */
-		    jsPlumb.ready(function(){
-		    	jsPlumb.connect({
-		    		source: "p1",
-		    		target: 'p2',
-		    		endpoint: 'Dot'
-		    	})
-		    })
-
-		    jsPlumb.importDefaults({
-		    ConnectionsDetachable: false
-		  })
+            $('#cd-dropdown').dropdown();
+            $('#cd-dropdown2').dropdown();
+            $('#forselect').css('position', 'relative')
+                .css('left', '10px');
 
 
-		  </script>
+        });
+        </script>
+        <!-- 2019-7-16 在这里读取origin2md里的所有txt，并用md-html解析器 -->
+        <div id='display_place' style="float: left;margin-left: -620px;width:1000px">
+            <!-- <script>
+            /* global jsPlumb */
+            jsPlumb.ready(function() {
+                jsPlumb.connect({
+                    source: "p1",
+                    target: 'p2',
+                    endpoint: 'Dot'
+                })
+            })
 
-		  <script type="text/javascript">
-		  	var converter = new showdown.Converter(),
-		    text      = '# hello, markdown!',
-		    html      = converter.makeHtml(text);
+            jsPlumb.importDefaults({
+                ConnectionsDetachable: false
+            })
+            </script> -->
+            <!--             <script type="text/javascript">
+            var converter = new showdown.Converter(),
+                text = '# hello, markdown!',
+                html = converter.makeHtml(text);
+            </script> -->
+            <div id='waitforadd'>
+            	<!-- <p id='fortest'>init</p> -->
+            	<p id='fortest2' style="display: none"> </p>
+            </div>
+            
+            <script type="text/javascript">
+            var converter = new showdown.Converter();
+            // 这里尝试加载 a.txt 中的markdown文本
+            // jQuery 可以和循环结合使用
+            // 利用ajax访问 getfile.php下的所有文件，然后利用循环增加元素
 
+            var filelist = $.ajax({url:"./getfile.php",async:false});
+            // document.getElementById('fortest').innerHTML = filelist.responseText;
+            // console.log(filelist.responseText.split('\n'))
+            // console.log(filelist.responseText)
+            // console.log(filelist)
 
-		  </script>
-		  <p>1</p>
-		  <p>1</p>
-		  <p>1</p>
-		  <p>1</p>
-		  <p>1</p>
-		  <p>1</p>
-		  <p>1</p>
-		  <p>1</p>
-		  <p>1</p>
-		  <p>1</p>
+            var filearray = filelist.responseText.split('<br/>');
+            for(var i=0;i<filearray.length-1;i++){
 
-<p id='fortest'>init</p>
-	<p id='fortest2' style="display: none"> </p>
+            	var content = $.ajax({url:filearray[i],async:false})
+            	content = converter.makeHtml(content.responseText);
+            	console.log(content)
+            	$("#waitforadd").append('<div class="memo">' + content + '</div>')
 
-  <script type="text/javascript">
-  	var converter = new showdown.Converter();
-  	// 这里尝试加载 a.txt 中的markdown文本
-
-  	$("#fortest2").load("a.txt",function(){
-  		html      = converter.makeHtml(document.getElementById('fortest2').innerHTML);
-    	console.log(html)
-    	document.getElementById('fortest').innerHTML = html;
-  	});
-
-  
-    
-
-  </script>
-		  
-
-		</div>
-
-
-	</div>
-	
-
-
+	           // $("#fortest2").load(filearray[i], function() {
+	           //          html = converter.makeHtml(document.getElementById('fortest2').innerHTML);
+	           //          console.log(html)
+	           //          document.getElementById('fortest').innerHTML += html;
+	           //      });
+            }
+            </script>
+        </div>
+    </div>
 </body>
+
 </html>

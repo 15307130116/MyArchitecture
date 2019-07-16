@@ -2,3 +2,10 @@
 	position: relative;
 	left: 800px;
 }
+
+.memo{
+	float: left;
+	width: 300px;
+	margin-left: 100px;
+
+}
