@@ -5,7 +5,9 @@
 
 .memo{
 	float: left;
-	width: 300px;
+	width: 250px;
+	height: 250px;
 	margin-left: 100px;
-
+	background-image: url('./image/circle.png');
+	background-repeat: no-repeat;
 }

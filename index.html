@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./utils/SimpleDropDownEffects-master/css/style4.css" />
     <link rel="stylesheet" type="text/css" href="./show.css" />
     <script src="./utils/SimpleDropDownEffects-master/js/modernizr.custom.63321.js"></script>
+    <script src="./show.js"></script>
     <!-- <script src="./show.js"></script>
 	<script>
 	$(document).ready(function(){
@@ -108,7 +109,11 @@
             	var content = $.ajax({url:filearray[i],async:false})
             	content = converter.makeHtml(content.responseText);
             	console.log(content)
-            	$("#waitforadd").append('<div class="memo">' + content + '</div>')
+                // 2019-7-18在此处对content解析，解析出标题，再设置背景
+                var title = parseTitle(content);
+                console.log(title);
+
+            	$("#waitforadd").append('<div class="memo">' + title + '</div>')
 
 	           // $("#fortest2").load(filearray[i], function() {
 	           //          html = converter.makeHtml(document.getElementById('fortest2').innerHTML);
