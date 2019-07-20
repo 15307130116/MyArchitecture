@@ -5,7 +5,7 @@ function parseTitle(content){
 }
 
 function parseContent(content){
-	var r = /}(.*?)/;
+	var r = /(<h3.*)/;
 	r.exec(content);
 	return RegExp.$1;
 }

@@ -112,8 +112,11 @@
                 // 2019-7-18在此处对content解析，解析出标题，再设置背景
                 var title = parseTitle(content);
                 console.log(title);
+                // 2019-7-20在此处对content解析，解析出内容，并设置双击显示
+                var info = content.substring(title.length).trim();
+                console.log(info)
 
-            	$("#waitforadd").append('<div class="memo">' + title + '</div>')
+            	$("#waitforadd").append('<div class="memo">' + title +'<div class="content">'+info+ '</div>'+ '</div>')
 
 	           // $("#fortest2").load(filearray[i], function() {
 	           //          html = converter.makeHtml(document.getElementById('fortest2').innerHTML);
@@ -121,6 +124,9 @@
 	           //          document.getElementById('fortest').innerHTML += html;
 	           //      });
             }
+
+            $('.content').hide();
+
             </script>
         </div>
     </div>

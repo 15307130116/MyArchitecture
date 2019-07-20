@@ -11,3 +11,9 @@
 	background-image: url('./image/circle.png');
 	background-repeat: no-repeat;
 }
+
+.memo:hover{
+	transform: scale(1.25);
+
+
+}
